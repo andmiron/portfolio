@@ -15,8 +15,8 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer>
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+    <footer className="mt-8">
+      <ul className="font-sm flex flex-row items-center justify-start gap-2 flex-wrap text-neutral-600 dark:text-neutral-300">
         {footerLinks.map((link) => (
           <li key={link.label}>
             <a
@@ -31,7 +31,7 @@ export default function Footer() {
           </li>
         ))}
       </ul>
-      <p className="text-neutral-600 dark:text-neutral-300">
+      <p className="text-neutral-600 dark:text-neutral-300 mt-4">
         © {new Date().getFullYear()} Andrii Myronenko
       </p>
     </footer>

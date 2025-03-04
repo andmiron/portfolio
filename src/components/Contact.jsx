@@ -38,16 +38,6 @@ export default function Contact() {
         If you would like to discuss a project, ask questions, or just connect,
         feel free to reach out. I would love to hear from you!
       </p>
-      <button
-        className="flex items-center justify-start w-full cursor-pointer"
-        onClick={copyToClipboard}
-      >
-        <FaCopy className="h-[20px] w-[20px] text-[#575757]" />
-        <p className="px-3 font-semibold text-neutral-600 dark:text-neutral-300 ">
-          myronenko.andrii.1994@gmail.com
-        </p>
-        {copied ? <p className="text-neutral-400">Copied!</p> : ""}
-      </button>
       <ul className="font-sm mt-8 flex flex-col justify-center space-y-2 text-neutral-600 md:space-x-4 md:space-y-2 dark:text-neutral-300">
         {contactLinks.map((link) => (
           <li key={link.label}>
@@ -63,6 +53,16 @@ export default function Contact() {
           </li>
         ))}
       </ul>
+      <button
+        className="flex items-center justify-start w-full cursor-pointer mt-2"
+        onClick={copyToClipboard}
+      >
+        <FaCopy className="h-[20px] w-[20px] text-[#575757]" />
+        <p className="px-3 font-semibold text-neutral-600 dark:text-neutral-300 ">
+          myronenko.andrii.1994@gmail.com
+        </p>
+        {copied ? <p className="text-neutral-400">Copied!</p> : ""}
+      </button>
     </div>
   );
 }

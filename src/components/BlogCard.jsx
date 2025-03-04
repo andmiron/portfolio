@@ -18,7 +18,7 @@ export default function BlogCard({ article }) {
           className="w-full h-40 object-cover rounded-t-md"
         />
 
-        <div className="w-full flex md:flex-col flex-row space-x-0 md:space-x-2 items-start p-2 gap-2">
+        <div className="w-full flex flex-col items-start p-2 gap-2">
           <h2 className="font-bold">{article.title}</h2>
           <div className="flex flex-wrap gap-1">
             {article.categories.map((category) => (

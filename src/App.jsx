@@ -21,7 +21,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <main className="flex-1 flex flex-col px-2 md:px-0 py-6 min-h-screen">
+    <main className="flex-1 flex flex-col sm:px-0 p-4 min-h-screen">
       <Nav />
       <section className="flex-1">
         <AnimatePresence mode="wait">
