@@ -4,7 +4,7 @@ const projects = [
   {
     title: "My Tour",
     description: "Simple fullstack application to manage tours.",
-    thumbnail: "/my-tour-screenshot.png",
+    thumbnail: "/my-tour-screenshot.PNG",
     codeLink: "https://github.com/andmiron/my-tour",
     demoLink: "https://my-tour-74lo.onrender.com",
     tags: [

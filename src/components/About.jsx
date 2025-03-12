@@ -1,10 +1,7 @@
 function About() {
   return (
     <div>
-      <p>
-        I'm a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences.
-      </p>
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">About</h1>
     </div>
   );
 }
