@@ -1,7 +1,10 @@
 function About() {
   return (
     <div>
-      <p>Hello</p>
+      <p>
+        I'm a software engineer specializing in building (and occasionally
+        designing) exceptional digital experiences.
+      </p>
     </div>
   );
 }
