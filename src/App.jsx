@@ -5,13 +5,13 @@ import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./components/Home.jsx";
 import Blog from "./components/Blog.jsx";
-import About from "./components/About.jsx";
+import Learn from "./components/Learn.jsx";
 import Portfolio from "./components/Portfolio.jsx";
 import Contact from "./components/Contact.jsx";
 
 const routes = [
   { path: "/", element: <Home /> },
-  { path: "/about", element: <About /> },
+  { path: "/learn", element: <Learn /> },
   { path: "/blog", element: <Blog /> },
   { path: "/portfolio", element: <Portfolio /> },
   { path: "/contact", element: <Contact /> },

@@ -1,45 +1,27 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaTelegram,
-  FaRegEnvelope,
-} from "react-icons/fa6";
-
-const links = [
-  { link: "https://github.com/andmiron", label: "github", icon: <FaGithub /> },
-  { link: "https://t.me/and_miron", label: "telegram", icon: <FaTelegram /> },
-  {
-    link: "https://www.linkedin.com/in/andrii-myronenko-650553279/",
-    label: "linkedin",
-    icon: <FaLinkedin />,
-  },
-  {
-    link: "mailto:myronenko.andrii.1994@gmail.com",
-    label: "myronenko.andrii.1994@gmail.com",
-    icon: <FaRegEnvelope />,
-  },
-];
+import { MdOutlineTouchApp } from "react-icons/md";
+import PageHeader from "./PageHeader";
+import Link from "./Link";
+import { links } from "../lib/links";
 
 export default function Contact() {
   return (
     <div>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Contact</h1>
+      <PageHeader icon={<MdOutlineTouchApp size={36} />} text="Get in touch" />
       <p className="mb-8">
         If you would like to discuss a project, ask questions, or just connect,
         feel free to reach out. I would love to hear from you!
       </p>
-      <ul className="font-sm flex flex-col items-start justify-center gap-3 flex-wrap text-neutral-600 dark:text-neutral-300">
+      <ul className="font-xl flex flex-col items-start justify-center gap-3 flex-wrap">
         {links.map((link) => (
-          <li key={link.label}>
-            <a
-              className="flex items-center gap-2 transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-              rel="noopener noreferrer"
-              target="_blank"
+          <li
+            key={link.label}
+            className="p-4 w-full rounded-lg border border-gray-200 dark:border-gray-800 hover:scale-105 hover:shadow-[0_0_15px_3px_rgba(156,163,175,0.7)] dark:hover:shadow-[0_0_15px_3px_rgba(55,65,81,0.9)] transition-all duration-300 ease-in-out"
+          >
+            <Link
               href={link.link}
-            >
-              {link.icon}
-              <p className="">{link.label}</p>
-            </a>
+              icon={<link.icon size={36} />}
+              text={link.label}
+            />
           </li>
         ))}
       </ul>

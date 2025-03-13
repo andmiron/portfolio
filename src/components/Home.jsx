@@ -1,7 +1,14 @@
+import { SiHey } from "react-icons/si";
+import PageHeader from "./PageHeader";
+import { TbFileCv } from "react-icons/tb";
+import Link from "./Link.jsx";
+import { PiProjectorScreenChartDuotone } from "react-icons/pi";
+import { NavLink } from "react-router";
+
 export default function Home() {
   return (
     <div>
-      <h1 className="font-semibold text-2xl mb-4">Welcome</h1>
+      <PageHeader icon={<SiHey size={36} />} text="Hey!" />
       <p className="mb-3">Hello and welcome on my website!</p>
       <p className="mb-3">
         I am a passionate Node.js developer, always eager to learn new things.
@@ -14,36 +21,21 @@ export default function Home() {
         I’m currently seeking exciting opportunities to collaborate and grow,
         and I’d love for you to explore my work!
       </p>
-
-      <h2 className="text-xl font-semibold mb-4">Little note about me</h2>
-      <p className="mb-3">
-        My life was dedicated to professional sports. I have been playing
-        basketball since I was 7 years old. What started as a childhood hobby
-        grew into a profession that gave me the opportunity to explore the
-        world, meet incredible people, and undoubtedly shaped me into a strong
-        person both mentally and physically.
-      </p>
-      <p className="mb-3">
-        However, I knew that such great things aren’t meant to last forever, so
-        I always made sure to prioritize my education throughout those years.
-        Having finished school successfully, I wanted to pursue a degree in
-        computer science, but my parents chose another field, believing it was
-        not a &apos;serious&apos; profession at the time. Despite this, the
-        desire to become a software engineer never left me.
-      </p>
-      <p className="mb-3">
-        Now, as my career as a professional athlete comes to an end, I am
-        determined to become a professional software engineer. It is not an easy
-        walk these days, especially when many fear that AI will replace
-        developers in the near future.
-      </p>
-      <p className="mb-3">
-        But I firmly believe that a good software engineer cannot be replaced by
-        a machine, no matter how powerful it may be.
-      </p>
-      <p className="mb-3 font-semibold">
-        After all, software engineering is much more than just writing code...
-      </p>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 w-full justify-around items-center text-xl ">
+        <Link
+          href="/cv.pdf"
+          text="Download CV"
+          icon={<TbFileCv size={36} />}
+          download="cv.pdf"
+        />
+        <NavLink
+          to="/portfolio"
+          className="font-sm flex items-center gap-1 transition-all text-neutral-600 dark:text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-100"
+        >
+          <PiProjectorScreenChartDuotone size={36} />
+          Jump to projects
+        </NavLink>
+      </div>
     </div>
   );
 }
