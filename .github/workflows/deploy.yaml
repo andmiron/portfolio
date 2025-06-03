@@ -3,7 +3,7 @@ name: Portfolio Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build_and_deploy:
@@ -13,7 +13,7 @@ jobs:
       - name: Pull latest code
         run: |
           cd /var/www/html/portfolio
-          git pull origin main
+          git pull origin master
 
       - name: Install dependencies
         run: |
