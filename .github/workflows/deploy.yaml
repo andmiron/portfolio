@@ -1,0 +1,30 @@
+name: Portfolio Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull latest code
+        run: |
+          cd /var/www/html/portfolio
+          git pull origin main
+
+      - name: Install dependencies
+        run: |
+          cd /var/www/html/portfolio
+          npm ci --omit=dev
+
+      - name: Build app
+        run: |
+          cd /var/www/html/portfolio
+          npm run build
+
+      - name: Restart PM2
+        run: |
+          pm2 restart portfolio
