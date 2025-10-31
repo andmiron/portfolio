@@ -11,7 +11,8 @@ export default function Home() {
       <PageHeader icon={<SiHey size={36} />} text="Hey!" />
       <p className="mb-3">Hello and welcome on my website!</p>
       <p className="mb-3">
-        I am a passionate Node.js developer, always eager to learn new things.
+        I am a passionate Node.js developer with experience in Technical
+        Support, always eager to learn new things.
       </p>
       <p className="mb-3">
         Here, you’ll find personal information, examples of my projects, and a

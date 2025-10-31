@@ -12,9 +12,8 @@ function ThemeToggle() {
       className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90 cursor-pointer"
     >
       <FaCircleHalfStroke
-        className={`h-[20px] w-[20px] ${
-          theme === "dark" ? "text-[#D4D4D4]" : "text-[#1c1c1c]"
-        }`}
+        className={`h-[20px] w-[20px] ${theme === "dark" ? "text-[#D4D4D4]" : "text-[#1c1c1c]"
+          }`}
       />
     </button>
   );
